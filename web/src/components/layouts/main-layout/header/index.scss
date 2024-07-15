@@ -47,34 +47,54 @@
 }
 
 .layout__right-header__item {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  overflow: hidden;
+  position: "relative";
+}
+
+.layout__right-header__item-icon {
+  padding: 8px;
   color: black;
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.layout__right-header__item-icon:hover {
+  background-color: rgba(180, 180, 180, 0.2);
+  border-radius: 999px;
 }
 
 .layout__right-header__menu {
-  width: 160px;
+  width: 120px;
   position: absolute;
   background-color: white;
-  bottom: 22;
-  right: 0;
-  border: 1px solid rgba(180, 180, 180, 0.2);
+  top: 56px;
+  right: 20px;
+  box-shadow: 0 2px 3px 1px rgba(180, 180, 180, 0.6),
+    3px 3px 2px 1px rgba(0, 0, 0, 0.19);
   border-radius: 6px;
   overflow: hidden;
 }
 
-.layout__right-header__menu-sub-item {
+.layout__right-header__menu-item {
+  padding: 0 8px;
   display: flex;
-  justify-content: start;
   align-items: center;
-  padding: 4;
   cursor: pointer;
 }
 
+.layout__right-header__menu-item:hover {
+  background-color: rgba(180, 180, 180, 0.1);
+}
+
 .layout__right-header__menu-item__icon {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .layout__right-header__menu-item__title {
   font-weight: 600;
-  font-size: 24px;
+  margin-left: 8px;
+  font-size: 14px;
 }
