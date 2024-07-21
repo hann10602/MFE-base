@@ -1,0 +1,18 @@
+.layout__container {
+  background: url("https://e0.pxfuel.com/wallpapers/1016/985/desktop-wallpaper-snow-mountain-night-landscape-minimalist-minimalism.jpg")
+    no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .layout__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

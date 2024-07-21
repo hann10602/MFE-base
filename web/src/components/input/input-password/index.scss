@@ -1,0 +1,18 @@
+.component__input-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 999px;
+  border: 1px solid gray;
+
+  span {
+    flex: 1 1 0%;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}

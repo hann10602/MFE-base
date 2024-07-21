@@ -1,0 +1,28 @@
+.component__input-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 999px;
+  border: 1px solid gray;
+
+  input {
+    flex: 1 1 0%;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .component__input-text__left-icon {
+    margin-left: 11px;
+    color: gray;
+  }
+
+  .component__input-text__right-icon {
+    margin-right: 11px;
+    color: gray;
+  }
+}
