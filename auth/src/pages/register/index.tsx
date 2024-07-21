@@ -34,10 +34,10 @@ export const RegisterPage = (props: Props) => {
             <InputPassword placeholder="Password" />
           </Form.Item>
           <Form.Item<TRegisterForm>
-            name="password"
+            name="confirmPassword"
             style={{ marginBottom: "24px" }}
           >
-            <InputPassword placeholder="Password" />
+            <InputPassword placeholder="Confirm password" />
           </Form.Item>
           <Form.Item<TRegisterForm>>
             <Button

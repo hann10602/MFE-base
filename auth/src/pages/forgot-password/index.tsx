@@ -33,7 +33,7 @@ export const ForgotPasswordPage = (props: Props) => {
               type="primary"
               className="forgot-password__submit-button"
             >
-              forgot-password
+              Forgot password
             </Button>
           </Form.Item>
         </Form>
