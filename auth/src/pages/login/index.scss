@@ -48,6 +48,53 @@
       height: 46px;
       font-weight: 500;
       font-size: 18px;
+      margin: 0;
+    }
+
+    .login__register-wrapper {
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      justify-content: end;
+      margin-bottom: 16px;
+      margin-top: 8px;
+
+      a {
+        margin-left: 4px;
+        color: #f19cdd;
+        font-weight: 700;
+
+        &:hover {
+          color: #ffa5ea;
+        }
+      }
+    }
+
+    .login__login-options-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .login__google-login {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ececec;
+        cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
+
+        &:hover {
+          background-color: #ffffff;
+        }
+
+        iconify-icon {
+          color: #e94235;
+        }
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }: Props) => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: "#a25c92",
+          colorPrimary: "#d386c1",
         },
       }}
     >

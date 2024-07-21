@@ -4,6 +4,7 @@ import { InputPassword, InputText, Button } from "Web/components";
 import { TLoginForm } from "../types";
 import "./index.scss";
 import { Icon } from "@iconify-icon/react";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -12,7 +13,7 @@ export const LoginPage = (props: Props) => {
     console.log("Success: ", values);
   };
 
-  const onFinishFailed: FormProps<TLoginForm>["onFinishFailed"] = (err) => {
+  const onFailed: FormProps<TLoginForm>["onFinishFailed"] = (err) => {
     console.log("Failed: ", err);
   };
 
@@ -23,10 +24,13 @@ export const LoginPage = (props: Props) => {
         <Form
           initialValues={{ remember: true }}
           onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
+          onFinishFailed={onFailed}
           autoComplete="off"
         >
-          <Form.Item<TLoginForm> name="username">
+          <Form.Item<TLoginForm>
+            style={{ marginBottom: "24px" }}
+            name="username"
+          >
             <InputText
               placeholder="Username"
               rightIcon={<Icon icon="mdi:account" />}
@@ -43,9 +47,9 @@ export const LoginPage = (props: Props) => {
             >
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
-            <a href="/forgot-password" className="login__forgot-password">
-              Forgot password ?
-            </a>
+            <Link to="/forgot-password" className="login__forgot-password">
+              Forgot password?
+            </Link>
           </div>
           <Form.Item<TLoginForm>>
             <Button
@@ -57,6 +61,14 @@ export const LoginPage = (props: Props) => {
             </Button>
           </Form.Item>
         </Form>
+        <div className="login__register-wrapper">
+          Don't have an account? <Link to="/register">Sign-up</Link>
+        </div>
+        <div className="login__login-options-wrapper">
+          <div className="login__google-login">
+            <Icon icon="ri:google-fill" />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,3 +3,13 @@ export type TLoginForm = {
   password: string;
   remember: boolean;
 };
+
+export type TRegisterForm = {
+  username: string;
+  password: string;
+  confirmPassword: string;
+};
+
+export type TForgotPasswordForm = {
+  email: string;
+};
