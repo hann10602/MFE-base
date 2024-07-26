@@ -38,7 +38,7 @@ export const ForgotPasswordPage = (props: Props) => {
           </Form.Item>
         </Form>
         <div className="forgot-password__login-wrapper">
-          Already have an account? <Link to="/login">Sign-in</Link>
+          Back to <Link to="/login">Sign-in</Link>
         </div>
       </div>
     </div>

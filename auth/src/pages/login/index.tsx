@@ -1,19 +1,25 @@
+import { Icon } from "@iconify-icon/react";
 import { Checkbox, Form, FormProps } from "antd";
 import React from "react";
-import { InputPassword, InputText, Button } from "Web/components";
+import { Link } from "react-router-dom";
+import { Button, InputPassword, InputText } from "Web/components";
 import { TLoginForm } from "../types";
 import "./index.scss";
-import { Icon } from "@iconify-icon/react";
-import { Link } from "react-router-dom";
 
 type Props = {};
 
 export const LoginPage = (props: Props) => {
+  const [form] = Form.useForm();
+
   const onFinish: FormProps<TLoginForm>["onFinish"] = (values) => {
     console.log("Success: ", values);
   };
 
   const onFailed: FormProps<TLoginForm>["onFinishFailed"] = (err) => {
+    form
+      .validateFields()
+      .then((e) => console.log("Values: ", e))
+      .catch((err) => console.log("error: ", err));
     console.log("Failed: ", err);
   };
 
@@ -23,6 +29,7 @@ export const LoginPage = (props: Props) => {
         <p className="login__title">Login</p>
         <Form
           initialValues={{ remember: true }}
+          form={form}
           onFinish={onFinish}
           onFinishFailed={onFailed}
           autoComplete="off"
@@ -30,13 +37,17 @@ export const LoginPage = (props: Props) => {
           <Form.Item<TLoginForm>
             style={{ marginBottom: "24px" }}
             name="username"
+            rules={[{ required: true, message: "Username is required" }]}
           >
             <InputText
               placeholder="Username"
               rightIcon={<Icon icon="mdi:account" />}
             />
           </Form.Item>
-          <Form.Item<TLoginForm> name="password">
+          <Form.Item<TLoginForm>
+            name="password"
+            rules={[{ required: true, message: "Password is required" }]}
+          >
             <InputPassword placeholder="Password" />
           </Form.Item>
           <div className="login__options">
@@ -55,6 +66,7 @@ export const LoginPage = (props: Props) => {
             <Button
               shape="round"
               type="primary"
+              htmlType="submit"
               className="login__submit-button"
             >
               Login

@@ -15,3 +15,7 @@ body {
 .ant-form-item {
   margin-bottom: 0;
 }
+
+.ant-input-status-error {
+  border: none !important;
+}
