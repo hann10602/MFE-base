@@ -5,8 +5,6 @@ type Props = {};
 
 const { Footer } = Layout;
 
-const FooterLayout = (props: Props) => {
+export const FooterLayout = (props: Props) => {
   return <Footer>FooterLayout</Footer>;
 };
-
-export default FooterLayout;
