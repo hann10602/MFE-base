@@ -1,0 +1,31 @@
+.profile__body-profile__wrapper {
+  .profile__body-profile__title {
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+
+  .profile__body-profile__information-wrapper {
+    display: flex;
+    padding: 24px;
+
+    .profile__body-profile__change-avatar {
+      .body-profile__change-avatar__avatar-wrapper {
+        padding: 24px;
+        border-right: 1px solid rgb(223, 223, 223);
+
+        .body-profile__change-avatar__avatar {
+          width: 180px;
+          height: 180px;
+          border-radius: 999px;
+        }
+
+        .body-profile__change-avatar__select-button {
+          width: 100px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

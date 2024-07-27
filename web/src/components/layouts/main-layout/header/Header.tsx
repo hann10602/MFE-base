@@ -98,7 +98,10 @@ export const HeaderLayout = (props: Props) => {
           />
           {isOpenSubMenu && (
             <div className="layout__right-header__menu">
-              <a href="/profile" className="layout__right-header__menu-item">
+              <Link
+                to="/profile?tab=profile"
+                className="layout__right-header__menu-item"
+              >
                 <Icon
                   className="layout__right-header__menu-item__icon"
                   icon="mdi:user-circle-outline"
@@ -106,8 +109,8 @@ export const HeaderLayout = (props: Props) => {
                 <p className="layout__right-header__menu-item__title">
                   Profile
                 </p>
-              </a>
-              <a href="/settings" className="layout__right-header__menu-item">
+              </Link>
+              <Link to="/settings" className="layout__right-header__menu-item">
                 <Icon
                   className="layout__right-header__menu-item__icon"
                   icon="material-symbols:settings-outline"
@@ -115,7 +118,7 @@ export const HeaderLayout = (props: Props) => {
                 <p className="layout__right-header__menu-item__title">
                   Settings
                 </p>
-              </a>
+              </Link>
               <div
                 onClick={handleLogout}
                 className="layout__right-header__menu-item"

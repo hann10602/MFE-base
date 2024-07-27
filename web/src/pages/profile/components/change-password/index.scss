@@ -1,0 +1,47 @@
+.profile__change-password__wrapper {
+  .profile__change-password__title {
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+
+  .profile__change-password__wrapper {
+    flex: 1 1 0%;
+    padding: 24px;
+
+    .profile__change-password__information-wrapper {
+      display: flex;
+
+      .profile__change-password__label-wrapper {
+        text-align: end;
+        margin-right: 16px;
+
+        p {
+          line-height: 48px;
+          margin-bottom: 24px;
+          font-weight: 600;
+        }
+      }
+
+      .profile__change-password__input-wrapper {
+        flex: 1 1 0%;
+
+        .profile__change-password__input {
+          width: 100%;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .profile__change-password__submit-wrapper {
+      display: flex;
+      justify-content: end;
+
+      .profile__change-password__submit-button {
+        width: 100px;
+        height: 40px;
+      }
+    }
+  }
+}

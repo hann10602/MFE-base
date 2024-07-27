@@ -1,0 +1,38 @@
+.body-profile__basic-information__wrapper {
+  flex: 1 1 0%;
+  padding: 24px;
+
+  .body-profile__basic-information__information-wrapper {
+    display: flex;
+
+    .body-profile__basic-information__label-wrapper {
+      text-align: end;
+      margin-right: 16px;
+
+      p {
+        line-height: 48px;
+        margin-bottom: 24px;
+        font-weight: 600;
+      }
+    }
+
+    .body-profile__basic-information__input-wrapper {
+      flex: 1 1 0%;
+
+      .body-profile__basic-information__input {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .body-profile__basic-information__submit-wrapper {
+    display: flex;
+    justify-content: end;
+
+    .body-profile__basic-information__submit-button {
+      width: 100px;
+      height: 40px;
+    }
+  }
+}
