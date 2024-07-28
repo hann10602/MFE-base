@@ -44,6 +44,7 @@ export const BasicInformation = (props: Props) => {
             rules={[
               {
                 required: true,
+                message: "Full name is required",
               },
             ]}
             className="body-profile__basic-information__input"
@@ -55,6 +56,7 @@ export const BasicInformation = (props: Props) => {
             rules={[
               {
                 required: true,
+                message: "Username is required",
               },
             ]}
             className="body-profile__basic-information__input"
@@ -66,20 +68,26 @@ export const BasicInformation = (props: Props) => {
             rules={[
               {
                 required: true,
+                message: "Gender is required",
               },
             ]}
             className="body-profile__basic-information__input"
             name="gender"
           >
-            <AntdRadio.Group>
-              <Radio value="male">Male</Radio>
-              <Radio value="female">Female</Radio>
+            <AntdRadio.Group
+              style={{ height: 48, display: "flex", alignItems: "center" }}
+            >
+              <div>
+                <Radio value="male">Male</Radio>
+                <Radio value="female">Female</Radio>
+              </div>
             </AntdRadio.Group>
           </Form.Item>
           <Form.Item<TBasicInformation>
             rules={[
               {
                 required: true,
+                message: "Date of birth is required",
               },
             ]}
             className="body-profile__basic-information__input"
@@ -91,6 +99,7 @@ export const BasicInformation = (props: Props) => {
             rules={[
               {
                 required: true,
+                message: "Email is required",
               },
             ]}
             className="body-profile__basic-information__input"
@@ -102,6 +111,7 @@ export const BasicInformation = (props: Props) => {
             rules={[
               {
                 required: true,
+                message: "Phone number is required",
               },
             ]}
             className="body-profile__basic-information__input"

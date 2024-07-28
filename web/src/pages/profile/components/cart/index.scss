@@ -1,0 +1,26 @@
+.profile__cart__wrapper {
+  .profile__cart__title {
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+
+  .cart-wrapper {
+    border: 1px solid rgb(223, 223, 223);
+    width: 100%;
+
+    tr {
+      text-align: center;
+      border-bottom: 1px solid rgb(223, 223, 223) !important;
+
+      .checkbox-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      th {
+      }
+    }
+  }
+}

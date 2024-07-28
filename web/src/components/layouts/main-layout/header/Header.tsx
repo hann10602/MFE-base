@@ -66,12 +66,12 @@ export const HeaderLayout = (props: Props) => {
         />
       </div>
       <div className="layout__right-header">
-        <a href="/cart" className="layout__right-header__item">
+        <Link to="/profile?tab=cart" className="layout__right-header__item">
           <Icon
             icon="ph:shopping-cart-light"
             className="layout__right-header__item-icon"
           />
-        </a>
+        </Link>
         <div className="layout__right-header__item">
           {true ? (
             <Icon

@@ -52,6 +52,7 @@ export const FooterLayout = (props: Props) => {
         <div className="layout__footer-column__content">
           <Link
             to="https://www.apple.com/vn/app-store/"
+            target="_blank"
             className="layout__footer-column__wrapper"
           >
             <Icon icon="logos:apple-app-store" width={24} height={24} />
@@ -59,6 +60,7 @@ export const FooterLayout = (props: Props) => {
           </Link>
           <Link
             to="https://play.google.com/store/games?hl=vi-VN"
+            target="_blank"
             className="layout__footer-column__wrapper"
           >
             <Icon icon="logos:google-play-icon" width={24} height={24} />

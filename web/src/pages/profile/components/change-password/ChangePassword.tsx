@@ -43,6 +43,7 @@ export const ChangePassword = (props: Props) => {
               rules={[
                 {
                   required: true,
+                  message: "Old password is required",
                 },
               ]}
             >
@@ -54,6 +55,7 @@ export const ChangePassword = (props: Props) => {
               rules={[
                 {
                   required: true,
+                  message: "New password is required",
                 },
               ]}
             >
@@ -65,16 +67,17 @@ export const ChangePassword = (props: Props) => {
               rules={[
                 {
                   required: true,
+                  message: "Confirm new password is required",
                 },
                 (formInstance) => ({
-                  message: "Lower must not be greater than upper",
+                  message: "Must match with new password",
                   validator(rule, value: string) {
-                    if (value === null) {
+                    if (value === undefined) {
                       return Promise.resolve();
                     }
-                    const upperValue =
+                    const compareField =
                       formInstance.getFieldValue("newPassword");
-                    if (value.includes(upperValue)) {
+                    if (!value.includes(compareField)) {
                       return Promise.reject(new Error());
                     }
                     return Promise.resolve();

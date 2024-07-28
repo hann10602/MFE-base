@@ -18,3 +18,13 @@ export type TChangePassword = {
   newPassword: string;
   confirmNewPassword: string;
 };
+
+export type TCartItem = {
+  isCheck?: boolean;
+  id: number;
+  name: string;
+  price: number;
+  newPrice?: number;
+  quantity: number;
+  thumbnail: string;
+};
