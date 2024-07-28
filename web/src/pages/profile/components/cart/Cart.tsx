@@ -87,18 +87,6 @@ export const Cart = (props: Props) => {
     total: item.price * item.quantity,
   }));
 
-  const handleCheckItem = (id: number) => {
-    setProducts((prev) =>
-      prev.filter((item) => {
-        if (item.id === id) {
-          item.isCheck = !item.isCheck;
-        }
-
-        return item;
-      })
-    );
-  };
-
   return (
     <div className="profile__cart__wrapper">
       <p className="profile__cart__title">Cart</p>
