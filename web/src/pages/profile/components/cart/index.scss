@@ -7,20 +7,44 @@
   }
 
   .cart-wrapper {
-    border: 1px solid rgb(223, 223, 223);
+    .ant-table-wrapper {
+      border-radius: 16px;
+      padding: 36px 0;
+      overflow: hidden;
+      width: 100%;
+
+      tr {
+        text-align: center;
+        border-bottom: 1px solid rgb(223, 223, 223) !important;
+
+        .checkbox-wrapper {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .old-price {
+      color: rgb(153, 153, 153);
+      text-decoration: line-through;
+    }
+  }
+
+  .cart__payment-wrapper {
     width: 100%;
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
 
-    tr {
-      text-align: center;
-      border-bottom: 1px solid rgb(223, 223, 223) !important;
+    .cart__total {
+      font-size: 20px;
+      font-weight: 500;
+    }
 
-      .checkbox-wrapper {
-        display: flex;
-        justify-content: center;
-      }
-
-      th {
-      }
+    .cart__buy-btn {
+      width: 200px;
+      height: 40px;
     }
   }
 }
